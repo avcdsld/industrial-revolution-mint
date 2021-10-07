@@ -13,15 +13,16 @@ import "@openzeppelin/contracts/utils/Context.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract NFT is Context, ERC721Enumerable, ERC721Burnable, ERC721Pausable, Ownable {
+    using Strings for uint256;
     using SafeMath for uint256;
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdTracker;
 
     string private _baseTokenURI;
-    uint256 public constant MAX_ELEMENTS = 2222;
+    uint256 public constant MAX_ELEMENTS = 1250;
     uint256 public constant MAX_PURCHASE = 20;
-    uint256 public constant price = 80000000000000000; //0.08 ETH
+    uint256 public constant price = 0;
 
     constructor(
         string memory name,
@@ -73,5 +74,18 @@ contract NFT is Context, ERC721Enumerable, ERC721Burnable, ERC721Pausable, Ownab
     function withdraw() public onlyOwner {
         uint256 balance = address(this).balance;
         payable(msg.sender).transfer(balance);
+    }
+
+    function updateBaseTokenURI(string memory baseTokenURI) public onlyOwner {
+        _baseTokenURI = baseTokenURI;
+    }
+
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+
+        uint256 num = (block.number % 9) + 1;
+        string memory baseURI = _baseURI();
+        return
+            bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString(), "-", num.toString())) : "";
     }
 }

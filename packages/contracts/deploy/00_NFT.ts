@@ -4,7 +4,13 @@ const func = async (hre: any) => {
   const { deployer } = await getNamedAccounts();
   await deploy("NFT", {
     from: deployer,
-    args: ["NFT Title", "SYMBOL", "url"],
+    // args: ["NFT Title", "SYMBOL", "url"],
+    // args: ["ArtiStake ARTIST NFT", "ARTI", "https://ipfs.fleek.co/ipfs/bafybeiexsh7jzsvcqgbmbkblfjqzhotgrb2jmp7nbqsmxqvw63p3yoqfi4"],
+    args: [
+      "Industrial Revolution",
+      "REVO",
+      "https://ipfs.fleek.co/ipfs/bafybeig2qnac7pkhnhbawatlybl7ss4iu5fcctmjrgayrvzu34gwseyuzq",
+    ],
     log: true,
   });
 };
