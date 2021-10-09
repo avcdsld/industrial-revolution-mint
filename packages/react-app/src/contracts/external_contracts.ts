@@ -155,6 +155,19 @@ const nftAbi = [
   },
   {
     inputs: [],
+    name: "MAX_OWNER_MINT",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
     name: "MAX_PURCHASE",
     outputs: [
       {
@@ -230,6 +243,19 @@ const nftAbi = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "creator",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [
       {
         internalType: "uint256",
@@ -273,6 +299,24 @@ const nftAbi = [
     type: "function",
   },
   {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "numberOfTokens",
+        type: "uint256",
+      },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+    ],
+    name: "mint",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
     inputs: [],
     name: "name",
     outputs: [
@@ -293,6 +337,19 @@ const nftAbi = [
         internalType: "address",
         name: "",
         type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "ownerMinted",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "_value",
+        type: "uint256",
       },
     ],
     stateMutability: "view",
@@ -563,7 +620,39 @@ const nftAbi = [
     type: "function",
   },
   {
-    inputs: [],
+    inputs: [
+      {
+        internalType: "string",
+        name: "baseTokenURI",
+        type: "string",
+      },
+    ],
+    name: "updateBaseTokenURI",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "_creator",
+        type: "address",
+      },
+    ],
+    name: "updateCreator",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address payable",
+        name: "to",
+        type: "address",
+      },
+    ],
     name: "withdraw",
     outputs: [],
     stateMutability: "nonpayable",
@@ -574,12 +663,12 @@ const nftAbi = [
 export default {
   80001: {
     contracts: {
-      nft: { address: "0x486a153A8d904fEf2AEF7f2d2BE8820ee600376f", abi: nftAbi },
+      nft: { address: "0x18fF05C7630d6B2f6e637Bdd0399Be1E406FCadd", abi: nftAbi },
     },
   },
   1: {
     contracts: {
-      nft: { address: "0xAEc8A198588f2C79026d02b28edaE5B4B0196Bf0", abi: nftAbi },
+      nft: { address: "0xabb414bc479db40fdd8b0577b80079351a318cdd", abi: nftAbi },
     },
   },
 };

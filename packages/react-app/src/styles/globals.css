@@ -8,3 +8,11 @@
     margin-right: -1em;
   }
 }
+
+body {
+  background-color: black;
+}
+
+.nine-images {
+  box-shadow: 0 0 2px white;
+}

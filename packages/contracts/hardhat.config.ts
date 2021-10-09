@@ -23,6 +23,7 @@ module.exports = {
     mainnet: {
       url: "https://mainnet.infura.io/v3/7495501b681645b0b80f955d4139add9",
       accounts: [privateKey],
+      gas: 4200000,
     },
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/7495501b681645b0b80f955d4139add9",
