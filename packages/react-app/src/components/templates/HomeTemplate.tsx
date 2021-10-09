@@ -203,16 +203,16 @@ export const HomeTemplate: React.FC = () => {
                 )}
                 {txHash ? (
                   <>
-                    <div className="pb-5">
+                    <div className="mt-5 pb-5">
                       <a href={explorerUrlPrefix + txHash} target="_blank" rel="noreferrer">
-                        <Text align="center" size="2xl" className="underline">
+                        <Text align="center" size="2xl" className="underline" color="white">
                           View Tx on Etherscan
                         </Text>
                       </a>
                     </div>
                     <div className="">
                       <a href={openseaMypageUrl} target="_blank" rel="noreferrer">
-                        <Text align="center" size="2xl" className="underline">
+                        <Text align="center" size="2xl" className="underline" color="white">
                           Open OpenSea MyPage
                         </Text>
                       </a>
