@@ -129,17 +129,17 @@ export const HomeTemplate: React.FC = () => {
         </div>
         <div className="p-10">
           <div className="grid grid-cols-3 gap-4">
-            <img className="nine-images" width="600px" src="/assets/image1.png" alt="Industrial Revolution" />
-            <img className="nine-images" width="600px" src="/assets/image2.png" alt="Industrial Revolution" />
-            <img className="nine-images" width="600px" src="/assets/image3.png" alt="Industrial Revolution" />
+            <img className="nine-images" width="600px" src="/assets/image1.gif" alt="Industrial Revolution" />
+            <img className="nine-images" width="600px" src="/assets/image2.gif" alt="Industrial Revolution" />
+            <img className="nine-images" width="600px" src="/assets/image3.gif" alt="Industrial Revolution" />
 
-            <img className="nine-images" width="600px" src="/assets/image4.png" alt="Industrial Revolution" />
-            <img className="nine-images" width="600px" src="/assets/image5.png" alt="Industrial Revolution" />
-            <img className="nine-images" width="600px" src="/assets/image6.png" alt="Industrial Revolution" />
+            <img className="nine-images" width="600px" src="/assets/image4.gif" alt="Industrial Revolution" />
+            <img className="nine-images" width="600px" src="/assets/image5.gif" alt="Industrial Revolution" />
+            <img className="nine-images" width="600px" src="/assets/image6.gif" alt="Industrial Revolution" />
 
-            <img className="nine-images" width="600px" src="/assets/image7.png" alt="Industrial Revolution" />
-            <img className="nine-images" width="600px" src="/assets/image8.png" alt="Industrial Revolution" />
-            <img className="nine-images" width="600px" src="/assets/image9.png" alt="Industrial Revolution" />
+            <img className="nine-images" width="600px" src="/assets/image7.gif" alt="Industrial Revolution" />
+            <img className="nine-images" width="600px" src="/assets/image8.gif" alt="Industrial Revolution" />
+            <img className="nine-images" width="600px" src="/assets/image9.gif" alt="Industrial Revolution" />
             {/* <P5Display index={random} /> */}
           </div>
           <div className="m-auto mt-10">
