@@ -118,6 +118,7 @@ export const HomeTemplate: React.FC = () => {
             Industrial Revolution moments / marimosphere
           </Heading>
         </div>
+
         <div className="pb-4">
           <Text align="center" color="white" className="pr-10 pl-10 mt-6">
             A collection of still images made from a collaborative movie with modular artist GALCID.
@@ -133,6 +134,21 @@ export const HomeTemplate: React.FC = () => {
             the future. We hope you enjoy it.
           </Text>
         </div>
+
+        <div className="m-0">
+          <div className="iframe-wrapper">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/znyKF_TsFlE?controls=0&autoplay=1&mute=1&loop=1&playlist=znyKF_TsFlE"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
         <div className="p-10">
           <div className="grid grid-cols-3 gap-4">
             <img className="nine-images" width="600px" src="/assets/image1.gif" alt="Industrial Revolution" />
