@@ -135,7 +135,7 @@ export const HomeTemplate: React.FC = () => {
         </div>
         <div className="p-10">
           <div className="grid grid-cols-3 gap-4">
-            {/* <img className="nine-images" width="600px" src="/assets/image1.gif" alt="Industrial Revolution" />
+            <img className="nine-images" width="600px" src="/assets/image1.gif" alt="Industrial Revolution" />
             <img className="nine-images" width="600px" src="/assets/image2.gif" alt="Industrial Revolution" />
             <img className="nine-images" width="600px" src="/assets/image3.gif" alt="Industrial Revolution" />
 
@@ -145,9 +145,9 @@ export const HomeTemplate: React.FC = () => {
 
             <img className="nine-images" width="600px" src="/assets/image7.gif" alt="Industrial Revolution" />
             <img className="nine-images" width="600px" src="/assets/image8.gif" alt="Industrial Revolution" />
-            <img className="nine-images" width="600px" src="/assets/image9.gif" alt="Industrial Revolution" /> */}
+            <img className="nine-images" width="600px" src="/assets/image9.gif" alt="Industrial Revolution" />
 
-            <GifPlayer className="nine-images" width="600px" gif="/assets/image1.gif" still="/assets/image1.png" />
+            {/* <GifPlayer className="nine-images" width="600px" gif="/assets/image1.gif" still="/assets/image1.png" />
             <GifPlayer className="nine-images" width="600px" gif="/assets/image2.gif" still="/assets/image2.png" />
             <GifPlayer className="nine-images" width="600px" gif="/assets/image3.gif" still="/assets/image3.png" />
 
@@ -157,7 +157,7 @@ export const HomeTemplate: React.FC = () => {
 
             <GifPlayer className="nine-images" width="600px" gif="/assets/image7.gif" still="/assets/image7.png" />
             <GifPlayer className="nine-images" width="600px" gif="/assets/image8.gif" still="/assets/image8.png" />
-            <GifPlayer className="nine-images" width="600px" gif="/assets/image9.gif" still="/assets/image9.png" />
+            <GifPlayer className="nine-images" width="600px" gif="/assets/image9.gif" still="/assets/image9.png" /> */}
 
             {/* <P5Display index={random} /> */}
           </div>
