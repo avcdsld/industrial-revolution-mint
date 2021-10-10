@@ -135,19 +135,23 @@ export const HomeTemplate: React.FC = () => {
           </Text>
         </div>
 
-        <div className="m-0">
-          <div className="iframe-wrapper">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/znyKF_TsFlE?controls=0&autoplay=1&mute=1&loop=1&playlist=znyKF_TsFlE"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
+        <div style={{ padding: "75% 0 0 0", position: "relative" }}>
+          <iframe
+            src="https://player.vimeo.com/video/627904151?h=390827999f&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            title="REVO_001.mp4"
+          ></iframe>
         </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
 
         <div className="p-10">
           <div className="grid grid-cols-3 gap-4">
