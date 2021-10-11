@@ -186,7 +186,7 @@ export const HomeTemplate: React.FC = () => {
             <Text align="center" size="xl" color="white" className="italic">
               One NFT contains images of nine unique moments.
               <br />
-              The main image switches pseudo-randomly.
+              The main image switches randomly when you refresh metadata.
             </Text>
           </div>
 
