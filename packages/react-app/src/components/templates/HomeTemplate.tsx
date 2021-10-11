@@ -181,6 +181,15 @@ export const HomeTemplate: React.FC = () => {
 
             {/* <P5Display index={random} /> */}
           </div>
+
+          <div className="m-auto mt-10">
+            <Text align="center" size="xl" color="white" className="italic">
+              One NFT contains images of nine unique moments.
+              <br />
+              The main image switches pseudo-randomly.
+            </Text>
+          </div>
+
           <div className="m-auto mt-10">
             <div className="pb-5">
               <Heading align="center" as="h2" size="xl" color="white">
