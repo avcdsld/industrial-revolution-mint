@@ -6,13 +6,12 @@ import { ethers } from "ethers";
 import { useWallet } from "../../hooks/useWallet";
 import { useNFT } from "../../hooks/useContract";
 import { Header } from "../organisms/Header";
-// import { P5Display } from "../organisms/P5Display";
 import { Heading } from "../atoms/Heading";
 import { Text } from "../atoms/Text";
 import { Button } from "../atoms/Button";
 import { getNFTContract } from "../../lib/web3";
-
-const GifPlayer = require("react-gif-player");
+import { analytics } from "../../firebase_config";
+import { logEvent } from "firebase/analytics";
 
 declare global {
   interface Window {
@@ -30,6 +29,7 @@ export const HomeTemplate: React.FC = () => {
 
   const mint = async () => {
     try {
+      logEvent(analytics, "mint_click");
       if (window.ethereum) {
         const chainId = await window.ethereum.request({ method: "eth_chainId" });
         if (chainId !== "0x1") {
@@ -43,9 +43,13 @@ export const HomeTemplate: React.FC = () => {
       const tx = await nftContractWithSigner.buy(1, { value: value });
       setTxHash(tx.hash);
       alert("After some time, please check the asset in OpenSea mypage.");
+      logEvent(analytics, "mint_executed");
       await tx.wait();
       setLoading(false);
     } catch (e) {
+      if (String(e.message).includes("denied")) {
+        logEvent(analytics, "mint_error_or_cancel");
+      }
       setLoading(false);
     }
   };
