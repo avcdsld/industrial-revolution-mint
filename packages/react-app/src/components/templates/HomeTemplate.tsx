@@ -296,7 +296,7 @@ export const HomeTemplate: React.FC = () => {
           <a href="https://twitter.com/marimosphere" target="_blank" rel="noreferrer" className="pr-2 pl-2">
             <FontAwesomeIcon color="white" style={{ padding: 10, fontSize: 50 }} icon={faTwitter} />
           </a>
-          <a href="https://discord.gg/vPhaHgWsnF" target="_blank" rel="noreferrer" className="pr-2 pl-2">
+          <a href="https://discord.gg/wdq7eatAKb" target="_blank" rel="noreferrer" className="pr-2 pl-2">
             <FontAwesomeIcon color="white p-10" style={{ padding: 10, fontSize: 50 }} icon={faDiscord} />
           </a>
           <a href="https://artistake.tokyo/" target="_blank" rel="noreferrer" className="pl-2">
