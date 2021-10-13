@@ -42,13 +42,15 @@ export const HomeTemplate: React.FC = () => {
       const value = ethers.utils.parseEther("0.1").toString();
       const tx = await nftContractWithSigner.buy(1, { value: value });
       setTxHash(tx.hash);
-      alert("After some time, please check the asset in OpenSea mypage.");
       logEvent(analytics, "mint_executed");
+      alert("After some time, please check the asset in OpenSea mypage.");
       await tx.wait();
       setLoading(false);
     } catch (e) {
       if (String(e.message).includes("denied")) {
-        logEvent(analytics, "mint_error_or_cancel");
+        logEvent(analytics, "mint_cancel");
+      } else {
+        logEvent(analytics, "mint_error");
       }
       setLoading(false);
     }
