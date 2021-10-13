@@ -126,7 +126,7 @@ export const HomeTemplate: React.FC = () => {
         </div>
 
         <div className="">
-          <Text align="center" color="white" className="pr-10 pl-10 mt-6">
+          <Text align="center" color="white" className="pr-10 pl-10 mt-10">
             A collection of still images made from a collaborative movie with modular artist GALCID.
           </Text>
           <Text align="center" color="white" className="pr-10 pl-10 mt-6">
@@ -247,16 +247,16 @@ export const HomeTemplate: React.FC = () => {
               <>
                 {!account ? (
                   <Button onClick={connectWallet} color="red" rounded={true} className="mb-8">
-                    connectWallet
+                    Connect Wallet
                   </Button>
                 ) : (
-                  <Button onClick={mint} color="red" rounded={true} className="" disabled={isLoading}>
-                    {isLoading ? "sending.." : "mint"}
+                  <Button onClick={mint} color="red" rounded={true} className="mb-8" disabled={isLoading}>
+                    {isLoading ? "sending.." : "Mint"}
                   </Button>
                 )}
                 {txHash ? (
                   <>
-                    <div className="mt-5 pb-5">
+                    <div className="pb-5">
                       <a href={explorerUrlPrefix + txHash} target="_blank" rel="noreferrer">
                         <Text align="center" size="2xl" className="underline" color="white">
                           View Tx on Etherscan
@@ -275,6 +275,19 @@ export const HomeTemplate: React.FC = () => {
               </>
             )}
           </div>
+
+          <div className="m-auto mt-6 mb-6">
+            <a href="https://opensea.io/collection/industrial-revolution-moments" target="_blank" rel="noreferrer">
+              
+              <Button color="bg-marimo-1" rounded={false} className="" textColor="text-white">
+                <div style={{ textAlign: "center" }} className="flex items-center justify-center">
+                  <img className="" width="30px" src="/assets/opensea-logo.png" alt="OpenSea" />
+                  <Text color="white" className="ml-2">View on OpenSea</Text>
+                </div>
+              </Button>
+            </a>
+          </div>
+
         </div>
       </div>
 
